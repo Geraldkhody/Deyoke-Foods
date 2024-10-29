@@ -1,5 +1,5 @@
 import logo from "../../assets/logo.png";
-import home_bg from "../../assets/home_background.png";
+import home_bg from "../../assets/home_background.jpg";
 
 
 export default {
