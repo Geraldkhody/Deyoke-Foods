@@ -1,17 +1,26 @@
 <template>
+  <Navbar />
   <Home />
   <About />
+  <Product />
+  <Testimonial />
 </template>
 
 <script>
 import Home from "@/Screen/Home/Home.vue"
 import About from "@/Screen/About/About.vue"
+import Navbar from "@/Screen/Home/Header/Navbar.vue"
+import Product from "@/Screen/Products/Products.vue"
+import Testimonial from "@/Screen/Testimonial/Testimonial.vue"
 
 export default {
   name: 'App',
   components: {
     Home,
     About,
+    Navbar,
+    Product,
+    Testimonial,
   }
 }
 </script>
@@ -19,12 +28,11 @@ export default {
 
 <style>
 :root {
-  --container-width: 80%;
-  --primarry-color: #014751;
+  --primary-color: #014751;
   --light-green: #9FE82B;
   --dark-green: #083F3D;
   --text-green: #445D65;
-
+  --navbar-height: 4.5rem;
 }
 
 * {
@@ -34,7 +42,12 @@ export default {
   font-family:  sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 #app {
   margin: auto;
+  transition: 0.3s linear;
 }
 </style>

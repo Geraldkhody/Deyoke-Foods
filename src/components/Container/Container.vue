@@ -6,7 +6,7 @@
 
 <style scoped>
 .container {
-    width: var(--container-width);
+    width: 80%;
     margin: auto;
 }
 

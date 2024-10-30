@@ -6,23 +6,27 @@
           <img src="@/assets/logo_new.png" alt="Logo">
         </a>
       </div>
+
       <!-- Main Links (visible on desktop and as a dropdown in mobile) -->
       <div :class="{ 'link': true, 'dropdown-menu': showMenu }">
-        <a href="#about">About Us</a>
-        <a href="#core-values">Core Values</a>
-        <a href="#team">Team</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#faq">FAQ</a>
+        <a @click.prevent="scrollToSection('about')">About Us</a>
+        <a @click.prevent="scrollToSection('core-values')">Core Values</a>
+        <a @click.prevent="scrollToSection('team')">Team</a>
+        <a @click.prevent="scrollToSection('testimonials')">Testimonials</a>
+        <a @click.prevent="scrollToSection('faq')">FAQ</a>
+        
         <div v-if="showMenu" class="mobile-actions">
           <Button text="Shop" color="#fff" bg="transparent" />
           <Button text="Contact Us" color="#014751" bg="white" />
         </div>
       </div>
+
       <!-- Action Buttons (visible on desktop only) -->
       <div v-if="!showMenu" class="actions">
         <Button text="Shop" color="#fff" bg="transparent" />
         <Button text="Contact Us" color="#014751" bg="white" />
       </div>
+
       <!-- Hamburger Icon with dynamic class binding -->
       <div :class="{ hamburger: true, 'hamburger-active': showMenu }" 
            @click="toggleMenu" 
@@ -61,6 +65,19 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener("scroll", scrollHandler)
 })
+
+const scrollToSection = (id) => {
+  const section = document.getElementById(id);
+  const navbarHeight = document.querySelector('nav').offsetHeight;
+
+  if (section) {
+    const offsetTop = section.offsetTop - navbarHeight;
+    window.scrollTo({
+      top: offsetTop,
+      behavior: 'smooth',
+    });
+  }
+};
 </script>
 
 <style scoped>
@@ -84,7 +101,7 @@ nav.scrolled {
 
 .container {
   display: flex;
-  height: 4.5rem;
+  height: var(--navbar-height);
   align-items: center;
   justify-content: space-between;
 }

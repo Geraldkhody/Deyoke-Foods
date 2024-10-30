@@ -16,5 +16,4 @@ import Header from "./Header/Header.vue"
 }
 
 
-
 </style>

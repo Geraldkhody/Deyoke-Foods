@@ -4,7 +4,7 @@
       <img src="@/assets/home_background.jpg" alt="" />
     </div>
     <div class="over">
-      <Navbar />
+      <!-- <Navbar /> -->
       <Main />
       <Subscribe />
     </div>
@@ -12,7 +12,7 @@
 </template>
 
 <script setup>
-import Navbar from "./Navbar.vue"
+// import Navbar from "./Navbar.vue"
 import Main from "./Main.vue"
 import Subscribe from "./Subscribe.vue"
 
@@ -22,16 +22,18 @@ import Subscribe from "./Subscribe.vue"
 <style scoped>
 #header {
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - var(--navbar-height));
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    overflow: hidden;
 }
 
 .background {
