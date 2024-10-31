@@ -9,10 +9,10 @@
 
       <!-- Main Links (visible on desktop and as a dropdown in mobile) -->
       <div :class="{ 'link': true, 'dropdown-menu': showMenu }">
+        <a @click.prevent="scrollToSection('home')">Home</a>
         <a @click.prevent="scrollToSection('about')">About Us</a>
-        <a @click.prevent="scrollToSection('core-values')">Core Values</a>
-        <a @click.prevent="scrollToSection('team')">Team</a>
         <a @click.prevent="scrollToSection('testimonials')">Testimonials</a>
+        <a @click.prevent="scrollToSection('team')">Team</a>
         <a @click.prevent="scrollToSection('faq')">FAQ</a>
         
         <div v-if="showMenu" class="mobile-actions">

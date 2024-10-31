@@ -24,3 +24,43 @@
     </div>
 
 </template>
+
+
+<style scoped>
+.testimonials-section {
+  padding: 2rem;
+  text-align: center;
+}
+
+.testimonials-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0f3c4b;
+  margin-bottom: 1.5rem;
+}
+
+.testimonials {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.testimonial {
+  max-width: 400px;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.testimonial h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #0f3c4b;
+}
+
+.testimonial p {
+  color: #555;
+  margin-top: 0.5rem;
+}
+</style>

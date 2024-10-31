@@ -1,8 +1,8 @@
 <template>
   <div>
     <Product />
-    <Powder />
     <Tea />
+    <Powder />
     
   </div>
 </template>

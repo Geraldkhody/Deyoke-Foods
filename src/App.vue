@@ -9,7 +9,7 @@
 <script>
 import Home from "@/Screen/Home/Home.vue"
 import About from "@/Screen/About/About.vue"
-import Navbar from "@/Screen/Home/Header/Navbar.vue"
+import Navbar from "@/Screen/Home/Navbar.vue"
 import Product from "@/Screen/Products/Products.vue"
 import Testimonial from "@/Screen/Testimonial/Testimonial.vue"
 

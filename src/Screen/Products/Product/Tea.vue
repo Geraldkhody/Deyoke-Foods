@@ -43,11 +43,12 @@ import Container from "@/components/Container/Container.vue";
 .product-info h2 {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #0f3c4b;
+  color: var(--primary-color);
 }
 
 .product-info p {
   margin: 1rem 0;
+  line-height: 1.5;
 }
 
 .buttons {
@@ -63,14 +64,26 @@ import Container from "@/components/Container/Container.vue";
 }
 
 .primary-btn {
-  background-color: #0f3c4b;
+  background-color: var(--primary-color);
   color: #fff;
   margin-right: 0.5rem;
 }
 
 .secondary-btn {
   background-color: transparent;
-  color: #0f3c4b;
-  border: 1px solid #0f3c4b;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+
+@media (max-width: 768px) {
+  .container { 
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+
+  .product-image img {
+    width: 90%;
+  }
 }
 </style>

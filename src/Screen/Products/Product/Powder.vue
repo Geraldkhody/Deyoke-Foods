@@ -43,13 +43,14 @@ import Container from "@/components/Container/Container.vue"
 }
 
 .product-info h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
-  color: #0f3c4b;
+  color: var(--primary-color);
 }
 
 .product-info p {
   margin: 1rem 0;
+  line-height: 1.5;
 }
 
 .buttons {
@@ -65,7 +66,7 @@ import Container from "@/components/Container/Container.vue"
 }
 
 .primary-btn {
-  background-color: #0f3c4b;
+  background-color: var(--primary-color);
   color: #fff;
   margin-right: 0.5rem;
 }
@@ -73,48 +74,34 @@ import Container from "@/components/Container/Container.vue"
 .secondary-btn {
   background-color: transparent;
   color: #0f3c4b;
-  border: 1px solid #0f3c4b;
+  border: 1px solid var(--primary-color);
+}
+
+.product-image {
+  border-radius: 8px;
+  width: 1000px;
 }
 
 .product-image img {
-  max-width: 100%;
-  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.testimonials-section {
-  padding: 2rem;
-  text-align: center;
+
+@media (max-width: 1023px) {
+
 }
 
-.testimonials-section h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #0f3c4b;
-  margin-bottom: 1.5rem;
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .product-image {
+    width: 90%;
+  }
 }
 
-.testimonials {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-}
-
-.testimonial {
-  max-width: 400px;
-  background-color: #f9f9f9;
-  padding: 1rem;
-  border-radius: 8px;
-  text-align: left;
-}
-
-.testimonial h3 {
-  font-size: 1.25rem;
-  font-weight: bold;
-  color: #0f3c4b;
-}
-
-.testimonial p {
-  color: #555;
-  margin-top: 0.5rem;
-}
 </style>

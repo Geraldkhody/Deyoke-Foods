@@ -1,8 +1,7 @@
 <template>
   <div class="product">
-    <div class="header-section">
-        <Container>
-      <div class="header-text">
+    <Container>
+      <div class="product-content">
         <h1>Deyoke Foods Turkey Berry Products</h1>
         <p class="subheading">SHOP</p>
         <p>OUR GLOBAL OUTLET</p>
@@ -16,11 +15,10 @@
           <li>Carbohydrates, etc</li>
         </ul>
       </div>
-      <div class="header-image">
-        <img src="@/assets/product.jpg" alt="Turkey Berry Product" />
+      <div class="product-image">
+        <img src="@/assets/product.png" alt="Turkey Berry Product" />
       </div>
-        </Container>
-    </div>
+    </Container>
   </div>
 </template>
 
@@ -30,45 +28,67 @@ import Container from "@/components/Container/Container.vue"
 </script>
 
 <style scoped>
-.header-section {
+.product {
     padding: 3rem 0;
-  background-color: #e6f0e6;
+  /* background-color: #e6f0e6; */
+  /* height: 200px; */
 }
 
 .container {
     align-items: center;
     display: flex;
-    /* justify-content: space-between; */
     gap: 10rem;
+  }
+
+.product-content {
+  background-color: #fff;
+  height: 100%;
+  /* width: 50%; */
 }
 
-.header-text h1 {
-  font-size: 2rem;
+.product-content h1 {
+  font-size: 2.1rem;
   font-weight: bold;
   color: #0f3c4b;
+  margin-bottom: 2rem;
 }
 
-.header-text .subheading {
+.product-content p {
   font-weight: bold;
-  color: #0f3c4b;
-}
-
-.header-text p {
+  color: var(--primary-color);
   margin: 0.5rem 0;
+  font-size: 14px;
 }
 
-.header-text .benefits {
+.product-content .benefits {
   list-style: none;
   padding: 0;
-  margin: 1rem 0;
+  margin-top: 2rem ;
 }
 
-.header-text .benefits li {
+.product-content .benefits li {
   margin: 0.5rem 0;
 }
 
-.header-image img {
-  width: 400px;
+.product-image {
+  background-color: var(--primary-color);
   border-radius: 8px;
+  padding: 1rem 2rem ;
+  max-width: clamp(100%, 380px, 350px);
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+ 
 }
 </style>
