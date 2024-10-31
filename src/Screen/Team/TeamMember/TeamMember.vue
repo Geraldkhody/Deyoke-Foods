@@ -89,6 +89,7 @@ const props = defineProps({
     .member-details {
         margin-top: 0;
         margin-left: 1rem;
+        /* text-align: center; */
     }
 }
 </style>

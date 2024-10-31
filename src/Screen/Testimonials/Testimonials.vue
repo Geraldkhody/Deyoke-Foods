@@ -23,8 +23,8 @@ const testimonials = reactive([
         user: "Sarah Mensah",
     },
     {
-        body: '"I’ve been incorporating Deyoke Foods’ turkey berry powder into my morning smoothies, and the difference is incredible! I feel more energized throughout the day, and I love knowing I’m adding such a nutritious ingredient to my diet. The flavor is subtle yet delightful, and I can’t recommend it enough!"',
-        user: "Sarah Mensah",
+        body: `"Deyoke Foods' turkey berry tea has become my go-to evening ritual. It’s calming and delicious, and I appreciate its health benefits. I've noticed improved digestion and a boost in my overall well-being since I started drinking it regularly. It’s a perfect way to unwind after a long day!"`,
+        user: "James Oppong",
     },
 ])
 </script>

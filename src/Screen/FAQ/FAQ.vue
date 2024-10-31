@@ -1,52 +1,48 @@
 <template>
   <div class="faq-section">
     <Container>
-    <p>Frequently Asked Questions</p>
-    <div>
+      <p class="header">Frequently Asked Questions</p>
+      <div>
         <div v-for="(item, index) in faqItems" :key="index" class="faq-item">
-        <div 
-            class="faq-question" 
-            @click="toggle(index)"
-        >
+          <div class="faq-question" @click="toggle(index)">
             <span>{{ item.question }}</span>
-            <span class="arrow">{{ openIndex === index ? '▲' : '▼' }}</span>
-        </div>
-        <div 
-            v-if="openIndex === index" 
-            class="faq-answer"
-        >
+            <span class="arrow">{{ openIndex === index ? "▲" : "▼" }}</span>
+          </div>
+          <div v-if="openIndex === index" class="faq-answer">
             <p>{{ item.answer }}</p>
+          </div>
         </div>
-        </div>
-
-    </div>
+      </div>
     </Container>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import Container from "@/components/Container/Container.vue"
+import { ref } from "vue";
+import Container from "@/components/Container/Container.vue";
 
 // Data for the FAQ items
 const faqItems = [
-  { question: 'Can pregnant women take our products?', answer: 'Our products are natural, but we recommend consulting a healthcare provider before use during pregnancy.' },
-  { question: 'How can incorporating turkey berry powder into my diet benefit my overall health?', answer: 'Turkey berry powder is rich in nutrients and can support immune health, digestion, and energy levels.' },
-  { question: 'Turkey berry and fertility', answer: 'Turkey berry has been traditionally used for its potential fertility-boosting properties.' },
-  { question: 'How to use turkey berry to treat anemia', answer: 'Turkey berry is rich in iron and can help improve anemia when consumed as part of a balanced diet.' },
-  { question: 'Turkey berry spiritual benefits', answer: 'Turkey berry is believed to have protective and healing spiritual qualities in various cultures.' },
-  { question: 'What is the use of turkey berry plant?', answer: 'Turkey berry can be used for culinary, medicinal, and nutritional purposes.' },
-  { question: 'How to take turkey berry powder', answer: 'Turkey berry powder can be added to smoothies, soups, or sprinkled on meals for added nutrition.' },
-  { question: 'Turkey berry side effects', answer: 'While generally safe, excessive consumption may cause stomach upset. Consult a doctor if you experience any adverse effects.' }
-]
+  {
+    question: "Can pregnant women take our products?",
+    answer:
+      "Yes, pregnant women can take our turkey berry powder and tea, as turkey berry is known for its nutritional benefits. However, we always recommend consulting with a healthcare provider before adding any new supplements or herbal products to ensure they align with individual health needs and circumstances during pregnancy. Your health and safety are our top priorities.",
+  },
+  {
+    question:
+      "How can incorporating turkey berry powder into my diet benefit my overall health?",
+    answer:
+      "Incorporating turkey berry powder into your diet can offer numerous health benefits. It is rich in essential vitamins and minerals, including vitamins A and C, calcium, and iron. These nutrients can help boost your immune system, support healthy skin, and improve bone health. Additionally, turkey berry is known for its antioxidant properties, which can help combat oxidative stress in the body. Regular consumption may also aid in digestion and promote overall wellness, making it a great addition to smoothies, soups, or teas.",
+  },
+];
 
 // State to track which question is open
-const openIndex = ref(null)
+const openIndex = ref(null);
 
 // Function to toggle the answer visibility
 const toggle = (index) => {
-  openIndex.value = openIndex.value === index ? null : index
-}
+  openIndex.value = openIndex.value === index ? null : index;
+};
 </script>
 
 <style scoped>
@@ -58,7 +54,7 @@ const toggle = (index) => {
 }
 
 .container {
-  display: flex;
+  /* display: flex; */
   justify-content: space-between;
   width: 70%;
   gap: 3rem;
@@ -91,10 +87,11 @@ p {
   margin-left: 2rem;
 }
 
-.faq-answer {
+.faq-answer p {
   padding: 0.5rem 0;
   color: #555;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  margin-left: 1rem;
 }
 
 @media (max-width: 1024px) {
@@ -128,7 +125,7 @@ p {
   }
 
   .faq-answer {
-    font-size: 0.85rem;
+    font-size: 1rem;
   }
 }
 

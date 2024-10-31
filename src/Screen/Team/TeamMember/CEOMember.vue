@@ -80,9 +80,16 @@ const props = defineProps({
 }
 
 @media (max-width: 768px) {
+  .member-details {
+    margin: 1rem 0;
+
+  }
+
   .ceo-member {
     flex-direction: column-reverse;
     align-items: center;
+    width: 100%;
+    margin: 0;
   }
   .profile-image {
     width: 100%;
