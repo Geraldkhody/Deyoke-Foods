@@ -11,7 +11,7 @@ import Home from "@/Screen/Home/Home.vue"
 import About from "@/Screen/About/About.vue"
 import Navbar from "@/Screen/Home/Navbar.vue"
 import Product from "@/Screen/Products/Products.vue"
-import Testimonial from "@/Screen/Testimonial/Testimonial.vue"
+import Testimonial from "@/Screen/Testimonials/Testimonials.vue"
 
 export default {
   name: 'App',
