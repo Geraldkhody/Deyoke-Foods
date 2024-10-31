@@ -9,7 +9,6 @@
           :user="item.user"
         />
       </div>
-
     </Container>
 </template>
 
@@ -28,16 +27,15 @@ const testimonials = reactive([
         user: "Sarah Mensah",
     },
 ])
-
 </script>
 
-<style  scoped>
+<style scoped>
 .container {
   margin-top: 4rem;
 }
 
 h2 {
-    font-size: 2rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #0f3c4b;
   text-align: center;
@@ -45,9 +43,29 @@ h2 {
 
 .testimonials {
   display: flex;
-  gap: 13rem;
+  gap: 3rem;
   margin-top: 1.5rem;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
+/* Responsive styling */
+@media (max-width: 1023px) {
+  h2 {
+    font-size: 1.75rem;
+  }
+  .testimonials {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+  .testimonials {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 </style>

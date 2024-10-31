@@ -4,25 +4,22 @@
   <About />
   <Product />
   <Testimonial />
+  <Team /> 
+  <FAQ />
+  <Footer />
 </template>
 
-<script>
+<script setup>
 import Home from "@/Screen/Home/Home.vue"
 import About from "@/Screen/About/About.vue"
 import Navbar from "@/Screen/Home/Navbar.vue"
 import Product from "@/Screen/Products/Products.vue"
 import Testimonial from "@/Screen/Testimonials/Testimonials.vue"
+import Team from "@/Screen/Team/Team.vue"
+import FAQ from "@/Screen/FAQ/FAQ.vue"
+import Footer from "@/Screen/Footer/Footer.vue"
 
-export default {
-  name: 'App',
-  components: {
-    Home,
-    About,
-    Navbar,
-    Product,
-    Testimonial,
-  }
-}
+
 </script>
 
 
