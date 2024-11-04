@@ -1,5 +1,6 @@
 <template>
   <nav :class="{ scrolled: isScrolled }">
+      <div :class="{'dropdown-bg': showMenu}" @click="toggleMenu"></div>
     <Container>
       <div class="logo">
         <a href="#home">
@@ -23,7 +24,7 @@
 
       <!-- Action Buttons (visible on desktop only) -->
       <div v-if="!showMenu" class="actions">
-        <Button text="Shop" color="#fff" bg="transparent" />
+        <!-- <Button text="Shop" color="#fff" bg="transparent" /> -->
         <Button text="Contact Us" color="#014751" bg="white" />
       </div>
 
@@ -77,6 +78,10 @@ const scrollToSection = (id) => {
       behavior: 'smooth',
     });
   }
+
+  setTimeout(() => {
+    toggleMenu();
+  }, 300)
 };
 </script>
 
@@ -211,6 +216,14 @@ a {
 }
 
 /* Dropdown Menu for Mobile */
+.dropdown-bg {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .dropdown-menu {
   display: none;
   flex-direction: column;

@@ -84,6 +84,7 @@ import Container from "@/components/Container/Container.vue"
     align-items: center;
     text-align: center;
     gap: 2rem;
+    margin-top: 2rem;
   }
 
   .footer-links, 

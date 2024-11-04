@@ -37,6 +37,7 @@ const props = defineProps({
   flex-direction: row;
   text-align: left;
   margin: 1rem;
+  margin-top: 2rem;
   transition: transform 0.2s ease-in-out;
   border: 1px solid #E1E5F0;
   border-radius: 10px;
@@ -72,6 +73,7 @@ const props = defineProps({
     align-items: center;
     text-align: center;
     width: 80%;
+    justify-content: center;
   }
   .profile-image {
     width: 100%;

@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div id="team" class="wrapper">
     <h2>Team</h2>
   <Container>
     <div class="team-grid">
@@ -37,13 +37,13 @@ import Container from '@/components/Container/Container.vue';
       {
         
         image: require('@/assets/Emmanuel.jpg'),
-        role: 'Communication & Quality Assurance Lead',
+        role: 'Communication & Quality Assurance Lead (co-founder)',
         degree: 'Bsc. Agricultural Engineering',
         name: 'Emmanuel Adjei',
       },
       {
         image: require('@/assets/Victoria.jpg'),
-        role: 'Marketing & Finance Lead',
+        role: 'Marketing & Finance Lead (co-founder)',
         degree: 'Bsc. Entrepreneurship',
         name: 'Baffour Frimpong Victoria',
       },
@@ -60,18 +60,25 @@ import Container from '@/components/Container/Container.vue';
         role: 'CEO, Production Lead (Founder)',
         degree: 'Bsc. Agricultural Engineering',
         name: 'Akanzige Tanga Joshua',
-    })
+    },)
 
 </script>
 
 <style scoped>
 h2 {
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .wrapper {
   text-align: center;
   margin-top: 6rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .team-grid {
@@ -94,6 +101,7 @@ h2 {
   .container {
     display: flex;
     flex-direction: column-reverse;
+    align-items: stretch;
   }
 
   .team-grid {

@@ -1,17 +1,15 @@
 <template>
-  <div class="faq-section">
+  <div id="faq" class="faq-section">
     <Container>
       <p class="header">Frequently Asked Questions</p>
       <div>
-        <div v-for="(item, index) in faqItems" :key="index" class="faq-item">
-          <div class="faq-question" @click="toggle(index)">
-            <span>{{ item.question }}</span>
-            <span class="arrow">{{ openIndex === index ? "▲" : "▼" }}</span>
-          </div>
-          <div v-if="openIndex === index" class="faq-answer">
-            <p>{{ item.answer }}</p>
-          </div>
-        </div>
+        <Question 
+          v-for="(item, index) in faqItems"
+          :key="index"
+          :index="item.index"
+          :question="item.question"
+          :answer="item.answer"
+        />
       </div>
     </Container>
   </div>
@@ -20,8 +18,9 @@
 <script setup>
 import { ref } from "vue";
 import Container from "@/components/Container/Container.vue";
+import Question from "./Question.vue"
 
-// Data for the FAQ items
+
 const faqItems = [
   {
     question: "Can pregnant women take our products?",
@@ -36,13 +35,7 @@ const faqItems = [
   },
 ];
 
-// State to track which question is open
-const openIndex = ref(null);
 
-// Function to toggle the answer visibility
-const toggle = (index) => {
-  openIndex.value = openIndex.value === index ? null : index;
-};
 </script>
 
 <style scoped>
@@ -60,6 +53,10 @@ const toggle = (index) => {
   gap: 3rem;
 }
 
+.header {
+  text-align: center;
+}
+
 p {
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -67,36 +64,11 @@ p {
   font-weight: 100;
 }
 
-.faq-item {
-  border-bottom: 1px solid #ddd;
-  padding: 0.5rem 0;
-}
 
-.faq-question {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: bold;
-  cursor: pointer;
-  padding: 0.5rem 0;
-}
-
-.arrow {
-  font-size: 1.2rem;
-  color: #666;
-  margin-left: 2rem;
-}
-
-.faq-answer p {
-  padding: 0.5rem 0;
-  color: #555;
-  font-size: 1rem;
-  margin-left: 1rem;
-}
 
 @media (max-width: 1024px) {
   .container {
-    flex-direction: column;
+    /* flex-direction: column; */
   }
   .faq-section {
     padding: 1.5rem;
@@ -121,36 +93,25 @@ p {
   }
 
   .arrow {
-    font-size: 1rem;
+    font-size: .8rem;
   }
 
   .faq-answer {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 
 @media (max-width: 480px) {
+  .container {
+    width: 85%;
+  }
+
   .faq-section {
     padding: 0.5rem;
   }
 
   p {
     font-size: 1.4rem;
-  }
-
-  .faq-question {
-    font-size: 0.9rem;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .arrow {
-    font-size: 0.9rem;
-    margin-left: 0;
-  }
-
-  .faq-answer {
-    font-size: 0.8rem;
   }
 }
 </style>

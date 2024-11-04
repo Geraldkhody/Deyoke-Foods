@@ -85,10 +85,14 @@ const props = defineProps({
         display: grid;
         grid-template-columns: 1fr;
         gap: 0.2rem;
+        border: 1px solid #E1E5F0;
+        border-radius: 10px;
+        text-align: center;
     }
     .member-details {
         margin-top: 0;
         margin-left: 1rem;
+        margin-bottom: 1rem;
         /* text-align: center; */
     }
 }
