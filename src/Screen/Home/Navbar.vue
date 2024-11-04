@@ -126,6 +126,7 @@ a {
   color: white;
   font-size: 16px;
   position: relative;
+  cursor: pointer;
 }
 
 .logo {
